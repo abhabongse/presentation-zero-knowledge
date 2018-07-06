@@ -27,16 +27,16 @@
 <textsize name="footnote" value="\footnotesize"/>
 <textsize name="script" value="\scriptsize"/>
 <textsize name="tiny" value="\tiny"/>
-<textstretch name="normal" value="3.25"/>
+<textstretch name="normal" value="3.2"/>
 <textstretch name="large" value="3.25"/>
-<textstretch name="Large" value="3.25"/>
-<textstretch name="LARGE" value="3.25"/>
-<textstretch name="huge" value="3.25"/>
-<textstretch name="Huge" value="3.25"/>
-<textstretch name="small" value="3.25"/>
-<textstretch name="footnote" value="3.25"/>
-<textstretch name="script" value="3.25"/>
-<textstretch name="tiny" value="3.25"/>
+<textstretch name="Large" value="3.3"/>
+<textstretch name="LARGE" value="3.35"/>
+<textstretch name="huge" value="3.4"/>
+<textstretch name="Huge" value="3.45"/>
+<textstretch name="small" value="3.0"/>
+<textstretch name="footnote" value="2.8"/>
+<textstretch name="script" value="2.6"/>
+<textstretch name="tiny" value="2.6"/>
 <symbolsize name="normal" value="9"/>
 <symbolsize name="large" value="15"/>
 <symbolsize name="small" value="6"/>
@@ -162,8 +162,10 @@
 \def\mdseries@sf{l}
 \def\bfseries@sf{eb}
 
-\newrobustcmd\semibold{\fontseries{sb}}
-\newrobustcmd{\oldstyle}[1]{{\usefont{T1}{SourceSerifPro-TOsF}{\seriesdefault}{\shapedefault}{#1}}}
+\newrobustcmd\selectweight[1]{%
+  \fontseries{#1}\selectfont}
+\newrobustcmd\oldstyle[1]{%
+  {\fontfamily{SourceSerifPro-TOsF}\selectfont}{#1}}
 \newrobustcmd\pgtitlefont{\usefont{T1}{fdr}{b}{n}}
 \newrobustcmd\pgnumfont{\usefont{T1}{fos}{b}{sc}}
 
