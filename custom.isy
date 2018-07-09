@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<!DOCTYPE ipestyle SYSTEM "ipe.dtd">
+<ipestyle name="custom">
+<preamble>
+\makeatletter
+
+\usepackage{array,booktabs}
+
+\makeatother
+</preamble>
+</ipestyle>

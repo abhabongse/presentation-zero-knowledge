@@ -129,72 +129,20 @@
 -1 0 m -2.0 0.333 l -2.0 -0.333 l h
 </path></symbol>
 <symbol name="footer/title-author">
-<text transformations="translations" pos="1120 -32" stroke="black" type="label" width="171.352" height="11.1944" depth="3.108" halign="right" valign="baseline" size="script" stroke="0.4">{\usefont{T1}{fos}{sb}{sc}\MakeLowercase{\theshorttitle} | \MakeLowercase{\theauthor}}</text>
+<text transformations="translations" pos="1120 -32" stroke="black" type="label" width="171.352" height="11.1944" depth="3.108" halign="right" valign="baseline" size="script" stroke="0.4">{\pginfofont\MakeLowercase{\theshorttitle} | \MakeLowercase{\theauthor}}</text>
 </symbol>
 <preamble>
 \makeatletter
+
 \usepackage{etoolbox}
-\newrobustcmd\iffirstpage{\ifnumequal{1}{\arabic{ipePage}}}
-\renewrobustcmd{\emph}[1]{\textbf{\color{DodgerBlue3!70!SlateGray4}#1}}
 
-%%%%%%%%%%%%%%%
-% SETUP FONTS %
-%%%%%%%%%%%%%%%
-
-\usepackage[T1]{fontenc}
-\usepackage{droidserif}
-\usepackage{lato}
-\usepackage{inconsolata}
-\usepackage{fouriernc}
-
-\def\familydefault{\sfdefault}
-\def\rmdefault{fdr}
-\def\sfdefault{lato-TOsF}
-\def\ttdefault{zi4}
-\def\zifour@scaled{s*[0.925]}
-\def\zifour@narrow{}
-\def\zifour@opt{0}
-\def\zifour@altopt{2}
-\def\zifour@spc{\hyphenchar\font=\m@ne}
-
-\usepackage{mweights}
-\def\bfseries@rm{b}
-\def\mdseries@sf{l}
-\def\bfseries@sf{eb}
-
-\newrobustcmd\selectweight[1]{%
-  \fontseries{#1}\selectfont}
-\newrobustcmd\oldstyle[1]{%
-  {\fontfamily{SourceSerifPro-TOsF}\selectfont}{#1}}
 \newrobustcmd\pgtitlefont{\usefont{T1}{fdr}{b}{n}}
 \newrobustcmd\pgnumfont{\usefont{T1}{fos}{b}{sc}}
+\newrobustcmd\pginfofont{\usefont{T1}{fos}{sb}{sc}}
 
-\usepackage{setspace}
-\setstretch{1.2}
-
-%%%%%%%%%%%%%%%%
-% SETUP TABLES %
-%%%%%%%%%%%%%%%%
-
-\usepackage{array,booktabs}
-
-%%%%%%%%%%%%%%
-% SETUP MATH %
-%%%%%%%%%%%%%%
-
-\usepackage{fdsymbol}
-\usepackage{fontawesome}
-\usepackage[%
-    activate={true,nocompatibility},final,tracking=true,letterspace=40,%
-    kerning=true,spacing=true,factor=1150,stretch=15,shrink=15%
-]{microtype}
-\microtypecontext{spacing=nonfrench}
-
-%%%%%%%%%%%%%%%%%%%%
-% SETUP PAGE TITLE %
-%%%%%%%%%%%%%%%%%%%%
-
+\newrobustcmd\iffirstpage{\ifnumequal{1}{\arabic{ipePage}}}
 \renewrobustcmd\PageTitle[1]{{\pgtitlefont{#1}}}
+
 \newrobustcmd\thetitle{}
 \newrobustcmd\theshorttitle{}
 \newrobustcmd\theauthor{}
