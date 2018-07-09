@@ -3,15 +3,16 @@
 <ipestyle name="font-selection">
 <preamble>
 \makeatletter
+\usepackage{etoolbox}
 
 \usepackage[T1]{fontenc}
-\usepackage{droidserif}
+\usepackage{noto}
 \usepackage{lato}
 \usepackage{inconsolata}
 \usepackage{fouriernc}
 
 \def\familydefault{\sfdefault}
-\def\rmdefault{fdr}
+\def\rmdefault{NotoSerif-TOsF}
 \def\sfdefault{lato-TOsF}
 \def\ttdefault{zi4}
 \def\zifour@scaled{s*[0.925]}
@@ -21,7 +22,8 @@
 \def\zifour@spc{\hyphenchar\font=\m@ne}
 
 \usepackage{mweights}
-\def\bfseries@rm{b}
+\def\mdseries@rm{l}
+\def\bfseries@rm{eb}
 \def\mdseries@sf{l}
 \def\bfseries@sf{eb}
 
@@ -33,10 +35,7 @@
 \usepackage{setspace}
 \setstretch{1.2}
 
-%%%%%%%%%%%%%%
-% SETUP MATH %
-%%%%%%%%%%%%%%
-
+% Setup math fonts and symbols
 \usepackage{fdsymbol}
 \usepackage{fontawesome}
 \usepackage[%
@@ -44,6 +43,7 @@
     kerning=true,spacing=true,factor=1150,stretch=15,shrink=15%
 ]{microtype}
 \microtypecontext{spacing=nonfrench}
+
 
 \makeatother
 </preamble>
