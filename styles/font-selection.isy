@@ -6,6 +6,8 @@
 \usepackage{etoolbox}
 
 \usepackage[T1]{fontenc}
+\usepackage[utf8x]{inputenc}
+
 \usepackage{noto}
 \usepackage{lato}
 \usepackage{inconsolata}
@@ -21,13 +23,25 @@
 \def\zifour@altopt{2}
 \def\zifour@spc{\hyphenchar\font=\m@ne}
 
-\usepackage{mweights}
-\def\mdseries@rm{l}
-\def\bfseries@rm{eb}
-\def\mdseries@sf{l}
-\def\bfseries@sf{eb}
-
 \newrobustcmd\selectweight[1]{\fontseries{#1}\selectfont}
+
+\usepackage[main=english,thai,english]{babel}
+\usepackage[resetletterform]{thaifont-setup}
+\def\fontstlwg@scale{0.85}
+% Use sans-serif as default for both Latin and Thai scripts.
+% This requires the option 'resetletterform' for thaifont-setup package.
+\def\letterformdefault@en{sf}
+\def\letterformdefault@th{sf}
+% Set TH Sarabun New as default Thai sans-serif font.
+\def\familydefault@th@sf{laksaman}
+% Use light/semibold variant for mdseries and bfseries font in opensans.
+\def\seriesdefault@en@rm@md{l}
+\def\seriesdefault@en@rn@bf{eb}
+\def\seriesdefault@en@sf@md{l}
+\def\seriesdefault@en@sf@bf{eb}
+% Default to inconsolata for monospaced fonts (with encoding T1)
+\def\familydefault@th@tt{zi4}
+\def\encodingdefault@th@tt{T1}
 
 \usepackage{setspace}
 \setstretch{1.2}
