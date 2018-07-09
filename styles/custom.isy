@@ -6,6 +6,8 @@
 
 \usepackage{array,booktabs}
 
+\newrobustcmd\shoutfont{\usefont{T1}{MerriweatherSans-TLF}{eb}{n}}
+
 \makeatother
 </preamble>
 </ipestyle>
