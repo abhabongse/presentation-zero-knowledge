@@ -27,10 +27,7 @@
 \def\mdseries@sf{l}
 \def\bfseries@sf{eb}
 
-\newrobustcmd\selectweight[1]{%
-  \fontseries{#1}\selectfont}
-\newrobustcmd\oldstyle[1]{%
-  {\fontfamily{SourceSerifPro-TOsF}\selectfont}{#1}}
+\newrobustcmd\selectweight[1]{\fontseries{#1}\selectfont}
 
 \usepackage{setspace}
 \setstretch{1.2}
@@ -43,7 +40,6 @@
     kerning=true,spacing=true,factor=1150,stretch=15,shrink=15%
 ]{microtype}
 \microtypecontext{spacing=nonfrench}
-
 
 \makeatother
 </preamble>
