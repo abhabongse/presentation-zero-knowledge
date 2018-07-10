@@ -56,6 +56,9 @@
 ]{microtype}
 \microtypecontext{spacing=nonfrench}
 
+% Hair space
+\newrobustcmd{\hrsp}{\ifmmode\mskip1mu\else\kern0.0625em\fi}
+
 \makeatother
 </preamble>
 </ipestyle>
