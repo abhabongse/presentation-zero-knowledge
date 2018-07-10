@@ -5,8 +5,12 @@
 \makeatletter
 
 \usepackage{array,booktabs}
+\usepackage{graphicx}
 
-\newrobustcmd\shoutfont{\usefont{T1}{MerriweatherSans-TLF}{eb}{n}}
+\newrobustcmd\shoutlatinfont{\usefont{T1}{MerriweatherSans-TLF}{eb}{n}}
+\newrobustcmd\shoutthaitext[1]{\scalebox{1.1}{\vphantom{ที่}\raisebox{0pt}[0pt][0pt]{#1}}}
+
+\newrobustcmd\symb[1]{{\latintext\bfseries\upshape{#1}}}
 
 \makeatother
 </preamble>

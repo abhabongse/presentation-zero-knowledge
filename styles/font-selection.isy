@@ -33,6 +33,7 @@
 \def\letterformdefault@en{sf}
 \def\letterformdefault@th{sf}
 % Set TH Sarabun New as default Thai sans-serif font.
+\def\familydefault@th@rm{garuda}
 \def\familydefault@th@sf{laksaman}
 % Use light/semibold variant for mdseries and bfseries font in opensans.
 \def\seriesdefault@en@rm@md{l}
