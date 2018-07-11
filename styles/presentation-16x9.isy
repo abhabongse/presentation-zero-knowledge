@@ -15,8 +15,11 @@
 <dashstyle name="dotted" value="[3 2] 0"/>
 <dashstyle name="dash dotted" value="[9 3 3 3] 0"/>
 <dashstyle name="dash dot dotted" value="[9 3 3 3 3 3] 0"/>
+<pen name="thin" value="0.8"/>
 <pen name="normal" value="1.2"/>
-<pen name="heavier" value="2.4"/>
+<pen name="thick" value="1.8"/>
+<pen name="heavy" value="2.4"/>
+<pen name="heavier" value="3.0"/>
 <pen name="fat" value="3.6"/>
 <pen name="ultrafat" value="6"/>
 <textsize name="normal" value="\normalsize"/>
