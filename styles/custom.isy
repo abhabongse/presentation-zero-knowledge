@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE ipestyle SYSTEM "ipe.dtd">
 <ipestyle name="custom">
+<color name="Default Gray" value="0.5"/>
 <preamble>
 \makeatletter
 
@@ -8,6 +9,7 @@
 \usepackage{array,booktabs}
 \usepackage{graphicx}
 \usepackage[normalem]{ulem}
+\usepackage{fancyvrb}
 
 % Stylistic helper functions
 \newrobustcmd\symb[1]{{\latintext\bfseries\upshape{#1}}}
@@ -33,6 +35,19 @@
 
 % Decorations
 \newrobustcmd\headersep{\ensuremath{\smallblacktriangleright}}
+
+% Badges
+\usepackage{tcolorbox}
+\newtcbox{\badgebox}[1][Default Gray]{%
+  nobeforeafter,colframe=black,colback={#1},boxrule=0pt,arc=0.4em,%
+  boxsep=0pt,left=0.25em,right=0.25em,top=0.3em,bottom=0.3em,tcbox raise base,%
+}
+\newrobustcmd{\badge}[2][Default Gray]{%
+  \,\badgebox[#1]{\usefont{T1}{fos}{sb}{sc}\scalebox{0.75}{\color{white}#2}}\,%
+}
+\newrobustcmd{\normalbadge}[2][Default Gray]{%
+  \,\badgebox[#1]{\usefont{T1}{fos}{sb}{sc}\scalebox{0.9}{\color{white}#2}}\,%
+}
 
 \makeatother
 </preamble>
