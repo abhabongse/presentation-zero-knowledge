@@ -1,8 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE ipestyle SYSTEM "ipe.dtd">
 <ipestyle name="custom">
-<!-- 	3E845C: half as saturated -->
-<color name="Emphasis Green" value="0.24313725490196078 0.5176470588235295 0.3607843137254902"/>
 <preamble>
 \makeatletter
 
