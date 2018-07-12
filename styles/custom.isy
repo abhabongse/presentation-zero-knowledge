@@ -1,17 +1,40 @@
 <?xml version="1.0"?>
 <!DOCTYPE ipestyle SYSTEM "ipe.dtd">
 <ipestyle name="custom">
+<!-- 	3E845C: half as saturated -->
+<color name="Emphasis Green" value="0.24313725490196078 0.5176470588235295 0.3607843137254902"/>
 <preamble>
 \makeatletter
 
+% Additional LaTeX packages
 \usepackage{array,booktabs}
 \usepackage{graphicx}
 \usepackage[normalem]{ulem}
 
-\newrobustcmd\shoutlatinfont{\usefont{T1}{MerriweatherSans-TLF}{eb}{n}}
-\newrobustcmd\shoutthaitext[1]{\scalebox{1.1}{\vphantom{ที่}\raisebox{0pt}[0pt][0pt]{#1}}}
-
+% Stylistic helper functions
 \newrobustcmd\symb[1]{{\latintext\bfseries\upshape{#1}}}
+\newrobustcmd\entity[1]{{\latintext\selectweight{b}\upshape{#1}}}
+\renewrobustcmd\em{\bfseries\color{KBTG Secondary Blue}}
+
+% Thai textual helper functions
+\newrobustcmd\thaistrut{\vphantom{\thaiThoThahan\thaiSaraIi\thaiMaiEk}}
+\newrobustcmd\reducestretch{\setstretch{0.8}}
+\newrobustcmd\thaiprotect[1]{{\raisebox{0pt}[0pt][0pt]{#1}\thaistrut}}
+
+% Header font selection
+\newrobustcmd\latinheader{\usefont{T1}{NotoSerif-TOsF}{eb}{n}}
+\newrobustcmd\thaiheader{\usefont{LTH}{garuda}{b}{n}}
+
+% Special font selection
+\newrobustcmd\latinshout{\usefont{T1}{MerriweatherSans-TLF}{eb}{n}}
+\newrobustcmd\shoutlatinfont{\latinshout}
+\newrobustcmd\textshoutthai[1]{%
+  \usefont{LTH}{garuda}{b}{n}%
+  \scalebox{1.1}{\thaistrut\raisebox{0pt}[0pt][0pt]{#1}}
+}
+
+% Decorations
+\newrobustcmd\headersep{\ensuremath{\smallblacktriangleright}}
 
 \makeatother
 </preamble>
