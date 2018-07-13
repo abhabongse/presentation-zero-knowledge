@@ -32,6 +32,7 @@
   \usefont{LTH}{garuda}{b}{n}%
   \scalebox{1.1}{\thaistrut\raisebox{0pt}[0pt][0pt]{#1}}
 }
+\newrobustcmd\maththai[1]{\text{\thaitext{#1}}}
 
 % Decorations
 \newrobustcmd\headersep{\ensuremath{\smallblacktriangleright}}
